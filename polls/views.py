@@ -94,8 +94,13 @@ class PersonTable(tables.Table):
         model = Person
         #template_name = "django_tables2/bootstrap.html"
         #template_name = "django_tables2/semantic.html"
-        template_name = "django_tables2/bootstrap5-responsive.html"
+        #template_name = "django_tables2/bootstrap5-responsive.html"
         # https://django-tables2.readthedocs.io/en/latest/pages/custom-rendering.html#available-templates
+
+class PersonView(tables.SingleTableView):
+    model = Person
+    table_class = PersonTable
+    template_name = 'polls/person_view.html'
 
 class PersonListView(tables.SingleTableView):
     model = Person

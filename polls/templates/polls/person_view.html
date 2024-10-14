@@ -1,0 +1,12 @@
+{% include 'material/includes/material_css.html' %}
+{% include 'material/includes/material_js.html' %}
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Persons</title>
+   </head>
+   <body>
+      {% load django_tables2 %}
+      {% render_table table %}
+   </body>
+</html>
