@@ -4,7 +4,7 @@
 |-|-|-|
 |Data Audit|django-auditlog||
 |Authentication|OOB||
-|Authorization|OOB + djangorestframework||
+|Authorization|OOB + djangorestframework|Must hook into group system, ideally via SSO assertions|
 |File Import|djangorestframework||
 |File Export|djangorestframework||
 |CRUD REST|djangorestframework||
