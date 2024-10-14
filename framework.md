@@ -13,6 +13,7 @@
 |Validations|djangorestframework||
 |Admin|OOB|Permission management, app settings, etc.|
 |Change Approval|? custom plugin ?||
+|Upgrades/Migrations|OOB||
 
 |Requirement|Notes|
 |-|-|
