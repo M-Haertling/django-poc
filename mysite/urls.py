@@ -21,4 +21,5 @@ urlpatterns = [
     path("polls/", include("polls.urls")),
     path('admin/', admin.site.urls),
     path('crud/',  include('crudbuilder.urls')),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

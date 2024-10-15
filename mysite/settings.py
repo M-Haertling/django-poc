@@ -57,6 +57,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'auditlog.middleware.AuditlogMiddleware',
+    'polls.middleware.crud.CRUDMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'

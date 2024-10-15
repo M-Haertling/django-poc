@@ -4,6 +4,7 @@ from django.utils import timezone
 from auditlog.registry import auditlog
 from auditlog.models import AuditlogHistoryField
 from auditlog.models import LogEntry
+from polls.registry import crudRegistry
 
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
@@ -32,4 +33,5 @@ class Person(models.Model):
     created_at = models.DateTimeField(auto_now=True)
     #created_by = models.ForeignKey(User, blank=True, null=True)
 
-auditlog.register(Person)
+
+crudRegistry.register(Person)
