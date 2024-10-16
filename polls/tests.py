@@ -3,7 +3,7 @@ import datetime
 from django.test import TestCase
 from django.utils import timezone
 
-from .models import Question
+from .models import Person, Question
 
 
 class QuestionModelTests(TestCase):
@@ -25,3 +25,15 @@ class QuestionModelTests(TestCase):
         time = timezone.now() - datetime.timedelta(hours=23, minutes=59, seconds=59)
         recent_question = Question(pub_date=time)
         self.assertIs(recent_question.was_published_recently(), True)
+
+class CRUDApiTest(TestCase):
+    def test_main(self):
+        from rest_framework.test import APIClient
+
+        client = APIClient()
+        #print(client.login(username='admin', password='admin'))
+        print(client.post('/api/persons/', {"name": "Wendy","email": "wendy@gmail.com"}, format='json'))
+        assert(Person.objects.all().count(), 1)
+        
+        print(client.delete('/api/persons/1'))
+        assert(Person.objects.all().count(), 0)

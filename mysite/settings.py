@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     # CRUD Builder
     'crudbuilder',
     'auditlog',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
